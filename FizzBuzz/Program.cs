@@ -14,11 +14,18 @@ namespace FizzBuzz
             {
                 if(i % 3 == 0)
                 {
-                    if (i % 5 == 0)
+                    if(i % 5 == 0)
                     {
-                        Console.WriteLine("FizzBuzz");
+                        if (i % 7 == 0)
+                        {
+                            Console.WriteLine("FizzBuzzBang");
+                        }
+                        else
+                        {
+                            Console.WriteLine("FizzBuzz");
+                        }
                     }
-                    else if (i % 7 == 0)
+                    else if(i % 7 == 0)
                     {
                         Console.WriteLine("FizzBang");
                     }
@@ -29,7 +36,7 @@ namespace FizzBuzz
                 }
                 else if(i % 5 == 0)
                 {
-                    if (i % 7 == 0)
+                    if(i % 7 == 0)
                     {
                         Console.WriteLine("BuzzBang");
                     }
