@@ -10,48 +10,29 @@ namespace FizzBuzz
             //100 is the very special number given in the exercise
             int total = 100;
 
-            for (int i = 1; i <= total; i++) 
+            for (int i = 1; i <= total; i++)
             {
-                if(i % 3 == 0)
+                string numberSubstitute = "";
+                if (i % 3 == 0)
                 {
-                    if(i % 5 == 0)
-                    {
-                        if (i % 7 == 0)
-                        {
-                            Console.WriteLine("FizzBuzzBang");
-                        }
-                        else
-                        {
-                            Console.WriteLine("FizzBuzz");
-                        }
-                    }
-                    else if(i % 7 == 0)
-                    {
-                        Console.WriteLine("FizzBang");
-                    }
-                    else
-                    {
-                        Console.WriteLine("Fizz");
-                    }
+                    numberSubstitute += "Fizz";
                 }
-                else if(i % 5 == 0)
+                if (i % 5 == 0)
                 {
-                    if(i % 7 == 0)
-                    {
-                        Console.WriteLine("BuzzBang");
-                    }
-                    else
-                    {
-                        Console.WriteLine("Buzz");
-                    }
+                    numberSubstitute += "Buzz";
                 }
-                else if(i % 7 == 0)
+                if (i % 7 == 0)
                 {
-                    Console.WriteLine("Bang");
+                    numberSubstitute += "Bang";
+                }
+
+                if (string.IsNullOrEmpty(numberSubstitute))
+                {
+                    Console.WriteLine(i);
                 }
                 else
                 {
-                    Console.WriteLine(i);
+                    Console.WriteLine(numberSubstitute);
                 }
             }
         }
