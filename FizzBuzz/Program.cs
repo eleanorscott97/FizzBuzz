@@ -12,12 +12,15 @@ namespace FizzBuzz
 
             for (int i = 1; i <= total; i++) 
             {
-                // check for multiples of 3,5 and 3&5 - switch to Fizz, Buzz, FizzBuzz respectively
                 if(i % 3 == 0)
                 {
-                    if(i % 5 == 0)
+                    if (i % 5 == 0)
                     {
                         Console.WriteLine("FizzBuzz");
+                    }
+                    else if (i % 7 == 0)
+                    {
+                        Console.WriteLine("FizzBang");
                     }
                     else
                     {
@@ -26,7 +29,18 @@ namespace FizzBuzz
                 }
                 else if(i % 5 == 0)
                 {
-                    Console.WriteLine("Buzz");
+                    if (i % 7 == 0)
+                    {
+                        Console.WriteLine("BuzzBang");
+                    }
+                    else
+                    {
+                        Console.WriteLine("Buzz");
+                    }
+                }
+                else if(i % 7 == 0)
+                {
+                    Console.WriteLine("Bang");
                 }
                 else
                 {
